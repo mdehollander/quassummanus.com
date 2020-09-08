@@ -1,9 +1,14 @@
 import React from "react"
 import styles from "../../styles/rythmic.privacy-policy.module.css"
+import { Helmet } from "react-helmet"
 
 export default props => {
   return (
     <article className={styles.container}>
+      <Helmet>
+        <title>Rythmic Privacy Policy</title>
+        <meta name="description" content="This is privacy policy page for rythmic app." />
+      </Helmet>
       <h1>Rythmic Privacy Policy</h1>
       <h2>Privacy Policy</h2>
       <p>

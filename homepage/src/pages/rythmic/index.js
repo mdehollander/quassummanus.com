@@ -1,10 +1,15 @@
 import React from "react"
 import styles from "../../styles/rythmic.module.css"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 export default props => {
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Rythmic - Metronome and Tuner</title>
+        <meta name="description" content="Rythmic is a beautiful, minimalistic metronome and tuner app, which also allows you to play and customise polirhythms." />
+      </Helmet>
       <h1 className={styles.heading}>rythmic - metronome and tuner</h1>
       <p className={styles.paragraph}>
         <i>This page is under construction...</i>

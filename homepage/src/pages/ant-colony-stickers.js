@@ -8,6 +8,7 @@ export default props => {
     <div className={styles.container}>
       <Helmet>
         <title>Ant Colony Stickers</title>
+        <meta name="description" content="Ant Colony Stickers for the best member of the colony - you!" />
       </Helmet>
       <h1 className={styles.heading}>Ant Colony Stickers</h1>
       <p className={styles.paragraph}>

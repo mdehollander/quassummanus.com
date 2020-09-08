@@ -9,6 +9,10 @@ export default () => {
     <>
       <Helmet>
         <title>Homepage</title>
+        <meta
+          name="description"
+          content="Welcome to "
+        />
       </Helmet>
       <Landing />
       <HomepageProductShowcase content={props} />
