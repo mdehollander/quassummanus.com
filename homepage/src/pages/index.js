@@ -1,11 +1,15 @@
 import React from "react"
 import Landing from "../components/homepage/landing/homepageLanding.jsx"
 import HomepageProductShowcase from "../components/homepage/showcase/homepageProductShowcase.jsx"
+import { Helmet } from "react-helmet"
 
 export default () => {
   const props = getStaticProps().props
   return (
     <>
+      <Helmet>
+        <title>Homepage</title>
+      </Helmet>
       <Landing />
       <HomepageProductShowcase content={props} />
     </>

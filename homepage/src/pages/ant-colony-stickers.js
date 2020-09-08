@@ -1,10 +1,14 @@
 import React from "react"
 import styles from "../styles/ant-colony-stickers.module.css"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 export default props => {
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Ant Colony Stickers</title>
+      </Helmet>
       <h1 className={styles.heading}>Ant Colony Stickers</h1>
       <p className={styles.paragraph}>
         <i>This page is under construction...</i>
