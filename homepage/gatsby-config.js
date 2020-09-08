@@ -5,8 +5,12 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://quassummanus.com`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-firebase",
       options: {
