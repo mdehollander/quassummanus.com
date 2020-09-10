@@ -2,15 +2,15 @@ import React from "react"
 import Footer from "../components/footer/footer"
 import { Helmet } from "react-helmet"
 import styles from "./layout.module.css"
-// import { useEffect } from 'react';
-// import firebase from "gatsby-plugin-firebase"
+import { useEffect } from 'react';
+import firebase from "gatsby-plugin-firebase"
 
 export default function Layout(props) {
   const {children} = props;
 
-  // useEffect(() => {
-  //   const analytics = firebase.analytics()
-  // })
+  useEffect(() => {
+    firebase.analytics();
+  })
   
   return (<>
     <Helmet>
