@@ -8,14 +8,17 @@ export default props => {
     <div className={styles.container}>
       <Helmet>
         <title>Rythmic - Metronome and Tuner</title>
-        <meta name="description" content="Rythmic is a beautiful, minimalistic metronome and tuner app, which also allows you to play and customise polirhythms." />
+        <meta
+          name="description"
+          content="Rythmic is a beautiful, minimalistic metronome and tuner app, which also allows you to play and customise polirhythms."
+        />
       </Helmet>
       <h1 className={styles.heading}>rythmic - metronome and tuner</h1>
       <p className={styles.paragraph}>
         <i>This page is under construction...</i>
       </p>
       <a
-        href="https://apps.apple.com/us/app/id1511246744"
+        href="https://apps.apple.com/us/app/id1515876711"
         className={styles.goHome}
         target="_blank"
         rel="noreferrer"
