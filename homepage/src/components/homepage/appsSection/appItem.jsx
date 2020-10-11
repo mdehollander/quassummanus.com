@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./styles/AppItem.module.css"
+import styles from "./styles/appItem.module.css"
 import { Link } from "gatsby"
 
 export default function AppItem({
