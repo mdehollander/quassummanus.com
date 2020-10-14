@@ -9,6 +9,7 @@ export default props => {
     <div style={{ backgroundColor: "#FED466", position: 'relative' }}>
       <div className={styles.container}>
         <Helmet>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Rythmic - Metronome and Tuner</title>
           <meta name="title" content="Rythmic - Metronome and Tuner" />
           <meta

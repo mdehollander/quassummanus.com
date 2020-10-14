@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: calc(100vh - 70px);
+  height: 100vh;
   position: relative;
 
   display: flex;
@@ -20,17 +20,20 @@
 }
 
 .heroTextContainer > h2 {
-  font-size: 1.8rem;
+  font-size: 4vh;
   text-align: center;
-  width: 320px;
+  max-width: 320px;
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 2vh;
+  padding: 8px;
 }
 
 .heroTextContainer > h1 {
-  font-size: 2rem;
+  font-size: 5vh;
+  text-align: center;
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 2vh;
+  padding: 8px;
 }
 
 .container > div {
