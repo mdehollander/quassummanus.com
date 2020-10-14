@@ -1,13 +1,62 @@
 .container {
   width: 100%;
   height: calc(100vh - 70px);
+  position: relative;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.heading {
+.heroTextContainer {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.heroTextContainer > h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  width: 320px;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.heroTextContainer > h1 {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.container > div {
+  position: relative;
+}
+
+.container > img {
+  padding: 0;
+  margin: 0 24px;
+  height: 50vh;
+  bottom: 0;
+
+  z-index: 10;
+
+  -webkit-filter: drop-shadow(5px 15px 40px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(5px 15px 40px rgba(0, 0, 0, 0.5));
+}
+
+.backgroundArrows {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* .heading {
   width: fit-content;
   margin: 0 auto;
 
@@ -21,7 +70,6 @@
   margin-top: 0.5rem;
 
   text-align: center;
-  
 }
 
 .goHome {
@@ -35,4 +83,4 @@
 .goHome:hover {
   color: #000;
   cursor: pointer;
-}
+} */
