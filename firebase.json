@@ -8,8 +8,12 @@
     ],
     "redirects": [
       {
-        "source": "/rythmic/ios",
+        "source": "/apps/rythmic/ios",
         "destination": "https://apps.apple.com/app/id1515876711",
+        "type": 301
+      }, {
+        "source": "/art/ant-colony-stickers/imessage",
+        "destination": "https://apps.apple.com/us/app/id1511246744",
         "type": 301
       }
     ]

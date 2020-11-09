@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../../styles/rythmic.privacy-policy.module.css"
+import styles from "../../../styles/rythmic.privacy-policy.module.css"
 import { Helmet } from "react-helmet"
 
 export default props => {

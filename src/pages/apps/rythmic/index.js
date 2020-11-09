@@ -1,8 +1,8 @@
 import React from "react"
-import styles from "../../styles/rythmic.module.css"
+import styles from "../../../styles/rythmic.module.css"
 // import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
-import DownloadOnAppStore from "../../components/common/downloadOnAppStore"
+import DownloadOnAppStore from "../../../components/common/downloadOnAppStore"
 
 export default props => {
   return (

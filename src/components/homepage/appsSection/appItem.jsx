@@ -47,7 +47,13 @@ export default function AppItem({
   return (
     <a href={url} className={styles.listitemlink}>
       <li className={styles.listitem} style={listItemWidthStyle}>
-        <img src={src} alt={name} className={styles.image} />
+        <img
+          src={src}
+          alt={name}
+          className={styles.image}
+          width="96"
+          height="96"
+        />
         <h4 className={styles.header}>{name}</h4>
         <div className={styles.paragraphgroup}>
           <p className={styles.paragraph}>{description}</p>

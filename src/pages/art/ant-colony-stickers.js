@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../styles/ant-colony-stickers.module.css"
+import styles from "../../styles/ant-colony-stickers.module.css"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 
