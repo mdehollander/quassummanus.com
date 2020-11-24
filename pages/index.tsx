@@ -1,9 +1,9 @@
-import Head from 'next/head'
+import Head from "next/head"
 
 import Landing from "../components/homepage/landing/homepageLanding"
 import HomepageProductShowcase from "../components/homepage/showcase/homepageProductShowcase"
 
-export default () => {
+export default function Home() {
   return (
     <>
       <Head>

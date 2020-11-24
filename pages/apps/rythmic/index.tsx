@@ -4,7 +4,7 @@ import styles from "../../../styles/apps/rythmic/rythmic.module.sass"
 
 import DownloadOnAppStore from "../../../components/common/downloadOnAppStore"
 
-export default props => {
+const RythmicHome = props => {
   return (
     <div style={{ backgroundColor: "#FED466", position: "relative" }}>
       <Head>
@@ -65,3 +65,5 @@ export default props => {
     </div>
   )
 }
+
+export default RythmicHome

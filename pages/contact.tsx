@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import styles from "../styles/contact.module.sass"
 
-export default props => {
+export default function Contact() {
   return (
     <div className={styles.container}>
       <Head>

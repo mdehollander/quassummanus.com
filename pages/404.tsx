@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import styles from "../styles/404.module.sass"
 
-export default props => {
+export default function NotFound(props) {
   return (
     <div className={styles.container}>
       <Head>

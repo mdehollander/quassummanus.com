@@ -2,7 +2,7 @@ import Head from "next/head"
 
 import styles from "../../../styles/apps/rythmic/privacy-policy.module.sass"
 
-export default props => {
+const RythmicTermsAndConditions = props => {
   return (
     <article className={styles.container}>
       <Head>
@@ -111,3 +111,5 @@ export default props => {
     </article>
   )
 }
+
+export default RythmicTermsAndConditions
