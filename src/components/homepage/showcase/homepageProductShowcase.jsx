@@ -4,15 +4,6 @@ import Spacer from "../other/spacer"
 import styles from "./homepageProductShowcase.module.css"
 
 export default function HomepageProductShowcase(props) {
-  // {
-  //   name: "Alien Love Stickers",
-  //   src: "/logos/ants.png",
-  //   url: "",
-  //   appStoreLink: "",
-  //   description:
-  //     "Love yourself, love others, even if they are alien to you...",
-  // },
-
   return (
     <div className={styles.data}>
       <div className={styles.darkenBackground} />
@@ -22,7 +13,7 @@ export default function HomepageProductShowcase(props) {
             {
               name: "rythmic",
               src: "/logos/rythmic.png",
-              url: "/rythmic",
+              url: "/apps/rythmic",
               appStoreLink: "/apps/rythmic/ios",
               description:
                 "The perfect combination of a metronome and a tuner in a beautiful package...",
@@ -36,7 +27,7 @@ export default function HomepageProductShowcase(props) {
             {
               name: "Ant Colony Stickers",
               src: "/logos/ants.png",
-              url: "/ant-colony-stickers",
+              url: "/art/ant-colony-stickers",
               appStoreLink: "/art/ant-colony-stickers/imessage",
               description:
                 "Stickers for your colony, by members of your colony...",
