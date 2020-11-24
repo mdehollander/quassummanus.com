@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import styles from "./styles/AppItem.module.sass"
+import styles from "./styles/appItem.module.sass"
 
 type Props = {
   name: string
