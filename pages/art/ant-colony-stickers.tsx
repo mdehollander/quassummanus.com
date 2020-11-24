@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import styles from "../../styles/ant-colony-stickers.module.sass"
 
-export default props => {
+const AntColonyStickers = props => {
   return (
     <div className={styles.container}>
       <Head>
@@ -33,3 +33,5 @@ export default props => {
     </div>
   )
 }
+
+export default AntColonyStickers

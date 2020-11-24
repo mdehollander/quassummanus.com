@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className={styles.contayner}>
       <FooterLinks />
-      <span>{"© 2020 Quassum Manus"}</span>
+      <span className={styles.copyright}>{"© 2020 Quassum Manus"}</span>
     </footer>
   )
 }
