@@ -50,7 +50,7 @@ const RythmicHome = props => {
         <div className={styles.heroTextContainer}>
           <h2>Best metronome has to cost a lot, right?</h2>
           <h1>Wrong. It's free.</h1>
-          <DownloadOnAppStore href="/rythmic/ios" />
+          <DownloadOnAppStore href="https://apps.apple.com/app/rythmic/id1515876711" />
         </div>
         <img
           src="/img/rythmic/rythmic-main-top.png"
