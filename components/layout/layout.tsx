@@ -1,12 +1,15 @@
+import { ReactNode } from "react"
 import Head from "next/head"
 
 import Footer from "../footer/footer"
 
 import styles from "./styles/layout.module.sass"
 
-export default function Layout(props) {
-  const { children } = props
+interface LayoutProps {
+  children: ReactNode
+}
 
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
