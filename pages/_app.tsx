@@ -11,23 +11,47 @@ import {
 
 import "../styles/global.sass"
 
+export const onLogin = async () => {
+  const token = localStorage.getItem("tinacms-github-token") || null
+  const headers = new Headers()
+
+  if (token) {
+    headers.append("Authorization", "Bearer " + token)
+  }
+
+  console.log("Requesting prreview!!!")
+  const resp = await fetch(`/api/preview`, { headers: headers })
+  const data = await resp.json()
+
+  if (resp.status == 200) window.location.href = window.location.pathname
+  else throw new Error(data.message)
+}
+
+const onLogout = () => {
+  return fetch(`/api/reset-preview`).then(() => {
+    window.location.reload()
+  })
+}
+
 export default class Site extends App {
   cms: TinaCMS
 
-  constructor(props) {
+  constructor(props: AppProps) {
     super(props)
 
     const github = new GithubClient({
       proxy: "/api/proxy-github",
       authCallbackRoute: "/api/create-github-access-token",
-      clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID,
-      baseRepoFullName: process.env.NEXT_PUBLIC_REPO_FULL_NAME,
-      baseBranch: process.env.NEXT_PUBLIC_BASE_BRANCH,
+      clientId: process.env.GITHUB_CLIENT_ID,
+      baseRepoFullName: process.env.REPO_FULL_NAME,
+      baseBranch: process.env.BASE_BRANCH,
     })
+
+    const isPreview = !!props.pageProps.preview
 
     // 1. Create the TinaCMS instance
     this.cms = new TinaCMS({
-      enabled: !!props.pageProps.preview,
+      enabled: isPreview,
       apis: {
         // 2. Register the GithubClient
         github,
@@ -35,8 +59,8 @@ export default class Site extends App {
       // 3. Register the Media Store
       media: new GithubMediaStore(github),
       // 4. Use the Sidebar and Toolbar
-      sidebar: props.pageProps.preview,
-      toolbar: props.pageProps.preview,
+      sidebar: isPreview,
+      toolbar: isPreview,
     })
   }
 
@@ -60,25 +84,4 @@ export default class Site extends App {
       </TinaProvider>
     )
   }
-}
-
-const onLogin = async () => {
-  const token = localStorage.getItem("tinacms-github-token") || null
-  const headers = new Headers()
-
-  if (token) {
-    headers.append("Authorization", "Bearer " + token)
-  }
-
-  const resp = await fetch(`/api/preview`, { headers: headers })
-  const data = await resp.json()
-
-  if (resp.status == 200) window.location.href = window.location.pathname
-  else throw new Error(data.message)
-}
-
-const onLogout = () => {
-  return fetch(`/api/reset-preview`).then(() => {
-    window.location.reload()
-  })
 }
