@@ -3,11 +3,11 @@
   "subtitle": "We engineer apps, games, art, and some open-source software.",
   "productSections": [
     {
-      "_template": "Section Header Template",
+      "_template": "homepageSectionHeader",
       "title": "We have some apps..."
     },
     {
-      "_template": "Product Template",
+      "_template": "homepageProduct",
       "name": "rythmic",
       "description": "The perfect combination of a metronome and a tuner in a beautiful package...",
       "src": "/logos/rythmic.png",
@@ -18,11 +18,11 @@
       "customLinkIcon": ""
     },
     {
-      "_template": "Section Header Template",
+      "_template": "homepageSectionHeader",
       "title": "And some art..."
     },
     {
-      "_template": "Product Template",
+      "_template": "homepageProduct",
       "name": "Ant Colony Stickers",
       "description": "Stickers for your colony, by members of your colony...",
       "src": "/logos/ants.png",
@@ -33,11 +33,11 @@
       "customLinkIcon": ""
     },
     {
-      "_template": "Section Header Template",
+      "_template": "homepageSectionHeader",
       "title": "Check out our open-source efforts..."
     },
     {
-      "_template": "Product Template",
+      "_template": "homepageProduct",
       "name": "Visit us on Github",
       "src": "/logos/logo_256.png",
       "url": "https://github.com/quassummanus",
