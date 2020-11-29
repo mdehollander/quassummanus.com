@@ -55,21 +55,21 @@ export default function AppItem({
   const listItemWidthStyle = { width: wide ? "500px" : "420px" }
 
   return (
-    <a href={url} className={styles.listitemlink}>
-      <li className={styles.listitem} style={listItemWidthStyle}>
-        <img
-          src={src}
-          alt={name}
-          className={styles.image}
-          width="96"
-          height="96"
-        />
+    <div className={styles.listitem} style={listItemWidthStyle}>
+      <img
+        src={src}
+        alt={name}
+        className={styles.image}
+        width="96"
+        height="96"
+      />
+      <a href={url} className={styles.listitemlink}>
         <h4 className={styles.header}>{name}</h4>
-        <div className={styles.paragraphgroup}>
-          <p className={styles.paragraph}>{description}</p>
-          {imageElement}
-        </div>
-      </li>
-    </a>
+      </a>
+      <div className={styles.paragraphgroup}>
+        <p className={styles.paragraph}>{description}</p>
+        {imageElement}
+      </div>
+    </div>
   )
 }

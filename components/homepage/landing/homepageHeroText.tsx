@@ -1,11 +1,19 @@
 import styles from "./styles/homepageHeroText.module.sass"
 
-export default function HomepageHeroText() {
+interface HomepageHeroTextProps {
+  title: string
+  subtitle: string
+}
+
+export default function HomepageHeroText({
+  title,
+  subtitle,
+}: HomepageHeroTextProps) {
   return (
     <>
-      <h1 className={styles.header}>Quassum Manus</h1>
+      <h1 className={styles.header}>{title}</h1>
       <p className={styles.paragraph}>
-        We engineer apps, games, art, and some open-source software.
+        {subtitle}
       </p>
     </>
   )
