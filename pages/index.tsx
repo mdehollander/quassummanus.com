@@ -21,8 +21,7 @@ export default function Home({ file }) {
     ],
   }
 
-  const [data, form] = useGithubJsonForm(file, formOptions)
-  // usePlugin(form)
+  const [, form] = useGithubJsonForm(file, formOptions)
 
   useGithubToolbarPlugins()
 
@@ -36,9 +35,9 @@ export default function Home({ file }) {
         />
       </Head>
       <InlineForm form={form}>
-        <Landing title={data.title} subtitle={data.subtitle} />
+        <Landing />
+        <HomepageProductShowcase />
       </InlineForm>
-      <HomepageProductShowcase />
     </>
   )
 }
