@@ -7,11 +7,14 @@ import styles from "./styles/footer-styles.module.sass"
 
 export default function FooterLinks() {
   const cms = useCMS()
-  const github = useGithubClient();
 
   const handleEditSiteClick = async () => {
-    // await onLogin();
-    cms.enable();
+    try {
+      await onLogin()
+      cms.enable()
+    } catch (e) {
+      console.error("Login Error", e)
+    }
   }
 
   return (
