@@ -10,6 +10,7 @@ import {
   useGithubToolbarPlugins,
 } from "react-tinacms-github"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
+import { InlineForm } from "react-tinacms-inline"
 
 export default function Home({ file }) {
   const formOptions = {
@@ -21,7 +22,7 @@ export default function Home({ file }) {
   }
 
   const [data, form] = useGithubJsonForm(file, formOptions)
-  usePlugin(form)
+  // usePlugin(form)
 
   useGithubToolbarPlugins()
 
@@ -34,7 +35,9 @@ export default function Home({ file }) {
           content="Welcome to the homepage of Quassuum Manus! We engineer apps, games, art, and some open-source software."
         />
       </Head>
-      <Landing title={data.title} subtitle={data.subtitle} />
+      <InlineForm form={form}>
+        <Landing title={data.title} subtitle={data.subtitle} />
+      </InlineForm>
       <HomepageProductShowcase />
     </>
   )

@@ -1,3 +1,5 @@
+import { InlineText } from "react-tinacms-inline"
+
 import styles from "./styles/homepageHeroText.module.sass"
 
 interface HomepageHeroTextProps {
@@ -11,9 +13,11 @@ export default function HomepageHeroText({
 }: HomepageHeroTextProps) {
   return (
     <>
-      <h1 className={styles.header}>{title}</h1>
+      <h1 className={styles.header}>
+        <InlineText name="title" />
+      </h1>
       <p className={styles.paragraph}>
-        {subtitle}
+        <InlineText name="subtitle" />
       </p>
     </>
   )

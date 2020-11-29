@@ -57,7 +57,8 @@ export default class Site extends App {
       // 3. Register the Media Store
       media: new GithubMediaStore(github),
       // 4. Use the Sidebar and Toolbar
-      sidebar: !!props.pageProps.preview,
+      // sidebar: !!props.pageProps.preview,
+      sidebar: false,
       toolbar: !!props.pageProps.preview,
     })
   }
