@@ -1,4 +1,51 @@
 {
   "title": "Quassum Manus",
-  "subtitle": "We engineer apps, games, art, and some open-source software."
+  "subtitle": "We engineer apps, games, art, and some open-source software.",
+  "productSections": [
+    {
+      "title": "We have some apps...",
+      "items": [
+        {
+          "name": "rythmic",
+          "description": "The perfect combination of a metronome and a tuner in a beautiful package...",
+          "src": "/logos/rythmic.png",
+          "url": "/apps/rythmic",
+          "appStoreLink": "https://apps.apple.com/app/rythmic/id1515876711",
+          "googlePlayLink": "",
+          "customLink": "",
+          "customLinkIcon": ""
+        }
+      ]
+    },
+    {
+      "title": "And some art...",
+      "items": [
+        {
+          "name": "Ant Colony Stickers",
+          "description": "Stickers for your colony, by members of your colony...",
+          "src": "/logos/ants.png",
+          "url": "/art/ant-colony-stickers",
+          "appStoreLink": "https://apps.apple.com/app/ant-colony-stickers/id1511246744",
+          "googlePlayLink": "",
+          "customLink": "",
+          "customLinkIcon": ""
+        }
+      ]
+    },
+    {
+      "title": "Check out our open-source efforts...",
+      "items": [
+        {
+          "name": "Visit us on Github",
+          "src": "/logos/logo_256.png",
+          "url": "https://github.com/quassummanus",
+          "description": "To follow tha latest updates in our open-source efforts check us out on github!",
+          "appStoreLink": "",
+          "googlePlayLink": "",
+          "customLink": "",
+          "customLinkIcon": ""
+        }
+      ]
+    }
+  ]
 }
