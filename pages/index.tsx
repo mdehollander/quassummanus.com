@@ -1,8 +1,8 @@
 import { GetStaticProps } from "next"
 import Head from "next/head"
 
-import Landing from "../components/homepage/landing/homepageLanding"
-import HomepageProductShowcase from "../components/homepage/showcase/homepageProductShowcase"
+import Landing from "../components/homepage/hero/homepageLanding"
+import HomepageProductShowcase from "../components/homepage/products/productShowcase"
 
 import { usePlugin } from "tinacms"
 import {
@@ -13,17 +13,8 @@ import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { InlineForm } from "react-tinacms-inline"
 
 export default function Home({ file }) {
-  const formOptions = {
-    label: "Introduction Text",
-    fields: [
-      { name: "title", component: "text" },
-      { name: "subtitle", component: "text" },
-    ],
-  }
-
-  const [data, form] = useGithubJsonForm(file, formOptions)
+  const [, form] = useGithubJsonForm(file)
   usePlugin(form)
-
   useGithubToolbarPlugins()
 
   return (
@@ -37,7 +28,7 @@ export default function Home({ file }) {
       </Head>
       <InlineForm form={form}>
         <Landing />
-        <HomepageProductShowcase productSections={data.productSections} />
+        <HomepageProductShowcase />
       </InlineForm>
     </>
   )
@@ -63,7 +54,7 @@ export const getStaticProps: GetStaticProps = async function ({
       error: null,
       preview: false,
       file: {
-        fileRelativePath: "content/home.json",
+        fileRelativePath: "content/homepage.json",
         data: (await import("../content/homepage.json")).default,
       },
     },
