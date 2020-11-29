@@ -11,8 +11,6 @@ export default function FooterLinks() {
 
   const handleEditSiteClick = async () => {
     // await onLogin();
-
-    // await github.authenticate();
     cms.enable();
   }
 
