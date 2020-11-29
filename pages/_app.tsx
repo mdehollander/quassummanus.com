@@ -47,11 +47,9 @@ export default class Site extends App {
       baseBranch: process.env.BASE_BRANCH,
     })
 
-    const isPreview = !!props.pageProps.preview
-
     // 1. Create the TinaCMS instance
     this.cms = new TinaCMS({
-      enabled: isPreview,
+      enabled: !!props.pageProps.preview,
       apis: {
         // 2. Register the GithubClient
         github,
@@ -59,8 +57,8 @@ export default class Site extends App {
       // 3. Register the Media Store
       media: new GithubMediaStore(github),
       // 4. Use the Sidebar and Toolbar
-      sidebar: isPreview,
-      toolbar: isPreview,
+      sidebar: !!props.pageProps.preview,
+      toolbar: !!props.pageProps.preview,
     })
   }
 

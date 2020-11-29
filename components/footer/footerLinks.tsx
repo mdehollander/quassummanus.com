@@ -9,12 +9,7 @@ export default function FooterLinks() {
   const cms = useCMS()
 
   const handleEditSiteClick = async () => {
-    try {
-      await onLogin()
-      cms.enable()
-    } catch (e) {
-      console.error("Login Error", e)
-    }
+    cms.enable()
   }
 
   return (

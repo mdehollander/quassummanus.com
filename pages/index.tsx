@@ -1,13 +1,29 @@
+import { GetStaticProps } from "next"
 import Head from "next/head"
 
 import Landing from "../components/homepage/landing/homepageLanding"
 import HomepageProductShowcase from "../components/homepage/showcase/homepageProductShowcase"
 
+import { usePlugin } from "tinacms"
+import {
+  useGithubJsonForm,
+  useGithubToolbarPlugins,
+} from "react-tinacms-github"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
-import { GetStaticProps } from "next"
 
 export default function Home({ file }) {
-  const { data } = file
+  const formOptions = {
+    label: "Introduction Text",
+    fields: [
+      { name: "title", component: "text" },
+      { name: "subtitle", component: "text" },
+    ],
+  }
+
+  const [data, form] = useGithubJsonForm(file, formOptions)
+  usePlugin(form)
+
+  useGithubToolbarPlugins()
 
   return (
     <>

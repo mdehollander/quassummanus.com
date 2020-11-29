@@ -3354,10 +3354,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next-tinacms-github@^0.34.0:
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/next-tinacms-github/-/next-tinacms-github-0.34.0.tgz#af4857c82d408dd6be1d2f0874783562002e73ae"
-  integrity sha512-pYEr4A1RoVDdFR2lXo532MQkfsji6DW+4+vTyFHVryOJ8kDnqyCMscz1TAVd80SF5+jTKQ0Vu2hesxC6+skeHA==
+next-tinacms-github@0.33:
+  version "0.33.0"
+  resolved "https://registry.yarnpkg.com/next-tinacms-github/-/next-tinacms-github-0.33.0.tgz#2309e8239d2be137de77d55fdf886cba2cdfc02c"
+  integrity sha512-YuQTYIICU9pIIuGrQbDo9D8MpUvWLnuDjSZyvDnV2pElHw7JW411CRC4Ct9VaxleYQVptCR14rMj+kppsP/0Sw==
   dependencies:
     "@tinacms/core" "^0.33.0"
     atob "2.1.2"
@@ -3366,13 +3366,13 @@ next-tinacms-github@^0.34.0:
     crypto-js "^4.0.0"
     gray-matter "4.0.2"
     qs "6.9.3"
-    react-tinacms-github "^0.34.0"
+    react-tinacms-github "^0.33.0"
     uuid "^8.1.0"
 
-next-tinacms-markdown@^0.34.0:
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/next-tinacms-markdown/-/next-tinacms-markdown-0.34.0.tgz#33066849c34960b5e28cfb2082c82a0f45ad1cc4"
-  integrity sha512-3c9YWcuEcPv/p5ZfIH4JqjfNLRuD2NJMteoIrcVt1y7DhXNiUUK0r817ZpnTxVkTffXnTW11amiQd8XQkFCRxA==
+next-tinacms-markdown@^0.33.0:
+  version "0.33.0"
+  resolved "https://registry.yarnpkg.com/next-tinacms-markdown/-/next-tinacms-markdown-0.33.0.tgz#66a76eead8fef745ea9eddea3582414f0cedbd7d"
+  integrity sha512-k4GIZ0fHiotI+HDILAQTzG+H6LPqQOiJ/ZYBgdQAgPpK2jvGKIFLar03dNELXIaOKkN+poyE2iNBbDx5pSGO0A==
   dependencies:
     gray-matter "^4.0.2"
     js-yaml "^3.13.1"
@@ -4144,14 +4144,14 @@ react-refresh@0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-tinacms-github@^0.34.0:
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/react-tinacms-github/-/react-tinacms-github-0.34.0.tgz#4ea9d502a9d55911bb7f7b11e33030cc93b5a9d0"
-  integrity sha512-GF2ngZ7AqzGKTuGFlipp8wuRa/ywwGCOZbqPSfsrAwqfwJA1o1e8psUUR8F9vSbrXan/f1Kkncq5Sld9LeypJA==
+react-tinacms-github@0.33, react-tinacms-github@^0.33.0:
+  version "0.33.0"
+  resolved "https://registry.yarnpkg.com/react-tinacms-github/-/react-tinacms-github-0.33.0.tgz#a7ed959527937d78be05287f3186e18d2d68761d"
+  integrity sha512-tx3GC8vwECVBC7QQyRtBCpVbHulH5BJJxtpppT9A8LkZKW6enzIQqVAKHfg/yJZsjILKcgnqICBOvTqtPEfIDA==
   dependencies:
     btoa "^1.2.1"
     js-cookie "^2.2.1"
-    next-tinacms-markdown "^0.34.0"
+    next-tinacms-markdown "^0.33.0"
 
 react@^17.0.1:
   version "17.0.1"
