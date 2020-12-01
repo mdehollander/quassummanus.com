@@ -33,6 +33,12 @@
       "customLinkIcon": ""
     },
     {
+      "_template": "homepageProduct",
+      "src": "/logos/base.png",
+      "name": "Product y'all",
+      "description": "Some description for you"
+    },
+    {
       "_template": "homepageSectionHeader",
       "title": "Check out our open-source efforts..."
     },
