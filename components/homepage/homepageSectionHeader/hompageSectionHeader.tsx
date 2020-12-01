@@ -19,7 +19,7 @@ export default function HomepageSectionHeader() {
               type="text"
               {...input}
               className={styles.headline}
-              placeholder="Enter title"
+              placeholder="Enter title..."
             />
           )
         } else {
@@ -32,7 +32,7 @@ export default function HomepageSectionHeader() {
 
 export const homepageSectionHeaderBlock = {
   Component: ({ index }) => (
-    <div className={styles.container}>
+    <div className={styles.blockContainer}>
       <BlocksControls index={index} focusRing={{ offset: 8 }}>
         <HomepageSectionHeader />
       </BlocksControls>
