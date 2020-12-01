@@ -1,8 +1,8 @@
 import { GetStaticProps } from "next"
 import Head from "next/head"
 
-import Landing from "../components/homepage/landing/homepageLanding"
-import HomepageProductShowcase from "../components/homepage/showcase/homepageProductShowcase"
+import Landing from "../components/homepage/hero/homepageLanding"
+import HomepageProductShowcase from "../components/homepage/products/productShowcase"
 
 import { usePlugin } from "tinacms"
 import {
@@ -10,19 +10,11 @@ import {
   useGithubToolbarPlugins,
 } from "react-tinacms-github"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
+import { InlineForm } from "react-tinacms-inline"
 
 export default function Home({ file }) {
-  const formOptions = {
-    label: "Introduction Text",
-    fields: [
-      { name: "title", component: "text" },
-      { name: "subtitle", component: "text" },
-    ],
-  }
-
-  const [data, form] = useGithubJsonForm(file, formOptions)
+  const [, form] = useGithubJsonForm(file)
   usePlugin(form)
-
   useGithubToolbarPlugins()
 
   return (
@@ -34,8 +26,10 @@ export default function Home({ file }) {
           content="Welcome to the homepage of Quassuum Manus! We engineer apps, games, art, and some open-source software."
         />
       </Head>
-      <Landing title={data.title} subtitle={data.subtitle} />
-      <HomepageProductShowcase />
+      <InlineForm form={form}>
+        <Landing />
+        <HomepageProductShowcase />
+      </InlineForm>
     </>
   )
 }
@@ -60,7 +54,7 @@ export const getStaticProps: GetStaticProps = async function ({
       error: null,
       preview: false,
       file: {
-        fileRelativePath: "content/home.json",
+        fileRelativePath: "content/homepage.json",
         data: (await import("../content/homepage.json")).default,
       },
     },

@@ -1,6 +1,10 @@
-export default function DownloadOnAppStore(props) {
+interface DownloadOnAppStoreProps { 
+  href?: string;
+}
+
+export default function DownloadOnAppStore({ href }: DownloadOnAppStoreProps) {
   return (
-    <a href={props.href}>
+    <a href={href}>
       <img
         src="/img/download-on-app-store.svg"
         alt="download-on-app-store"
