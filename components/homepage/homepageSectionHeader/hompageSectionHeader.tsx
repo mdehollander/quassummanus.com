@@ -1,7 +1,7 @@
 import { useCMS } from "tinacms"
 import { BlocksControls, InlineText, InlineField } from "react-tinacms-inline"
 
-import styles from "./styles/HomepageSectionHeader.module.sass"
+import styles from "./styles/homepageSectionHeader.module.sass"
 
 export interface HomepageSectionHeaderType {
   title: string
