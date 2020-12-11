@@ -1,4 +1,5 @@
 import Router from "next/router"
+import Image from "next/image"
 import {
   InlineText,
   InlineTextarea,
@@ -36,15 +37,28 @@ export default function HomepageProduct({ data, index }: BlockComponentProps) {
   return (
     <div className={styles.productContainer}>
       <div onClick={handleGoToProductPage}>
-        <InlineImage
-          name="src"
-          parse={media => `/logos/${media.filename}`}
-          uploadDir={() => "/public/logos"}
-          previewSrc={fieldValue => cms.media.previewSrc(`public${fieldValue}`)}
-          alt="product-logo"
-          focusRing={false}
-          className={styles.image}
-        />
+        {cms.enabled ? (
+          <InlineImage
+            name="src"
+            parse={media => `/logos/${media.filename}`}
+            uploadDir={() => "/public/logos"}
+            previewSrc={fieldValue =>
+              cms.media.previewSrc(`public${fieldValue}`)
+            }
+            alt="product-logo"
+            focusRing={false}
+            className={styles.image}
+          />
+        ) : (
+          <div className={styles.image}>
+            <Image
+              src={data.src}
+              width={100}
+              height={100}
+              alt={`${data.name} logo`}
+            />
+          </div>
+        )}
       </div>
       <div>
         {/* Product Name Field */}
