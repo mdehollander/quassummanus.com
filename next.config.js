@@ -12,4 +12,8 @@ module.exports = {
     REPO_FULL_NAME: process.env.REPO_FULL_NAME,
     BASE_BRANCH: process.env.BASE_BRANCH,
   },
+  i18n: {
+    locales: ["en-US"],
+    defaultLocale: "en-US",
+  },
 }
