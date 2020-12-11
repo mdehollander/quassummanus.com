@@ -88,6 +88,7 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="theme-color" content="#212529" />
+        <meta name="robots" content="index"/>
       </Head>
       <main className={styles.main}>{children}</main>
       <Footer />
