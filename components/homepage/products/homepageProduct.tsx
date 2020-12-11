@@ -48,13 +48,13 @@ export default function HomepageProduct({ data, index }: BlockComponentProps) {
       </div>
       <div>
         {/* Product Name Field */}
-        <h4 className={styles.header} onClick={handleGoToProductPage}>
+        <h3 className={styles.header} onClick={handleGoToProductPage}>
           <InlineText
             name="name"
             placeholder="Product Name"
             focusRing={false}
           />
-        </h4>
+        </h3>
 
         {/* Product Description Field */}
         <p className={styles.paragraph} onClick={handleGoToProductPage}>
