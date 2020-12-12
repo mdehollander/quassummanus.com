@@ -1,10 +1,11 @@
 require("dotenv").config()
 
-// require("nextjs-sitemap-generator")({
-//   baseUrl: "https://quassummanus.com",
-//   pagesDirectory: __dirname + "/pages",
-//   targetDirectory: "static/",
-// })
+require("nextjs-sitemap-generator")({
+  baseUrl: "https://quassummanus.com",
+  pagesDirectory: __dirname + "/pages",
+  targetDirectory: "public/",
+  ignoredPaths: ["/api", "/github/authorizing"],
+})
 
 module.exports = {
   env: {
